@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ViewController : UIViewController<UIScrollViewDelegate>{
+    __weak IBOutlet UIWebView *webView;
+}
+@property (nonatomic,assign) CGFloat lastContentOffset;
+@property IBOutlet UINavigationBar *navigationBar;
+@property IBOutlet NSLayoutConstraint *navigationBarTop;
 
 @end
 
